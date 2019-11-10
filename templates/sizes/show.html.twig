@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sizes{% endblock %}
+
+{% block body %}
+    <h1>Sizes</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ size.id }}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{ size.size }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('sizes_index') }}">back to list</a>
+
+    <a href="{{ path('sizes_edit', {'id': size.id}) }}">edit</a>
+
+    {{ include('sizes/_delete_form.html.twig') }}
+{% endblock %}
